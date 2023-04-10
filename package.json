@@ -1,0 +1,16 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "The best way to watch videos.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HY219/wetube-reloaded.git"
+  },
+  "author": "Hyeyeon Jeong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HY219/wetube-reloaded/issues"
+  },
+  "homepage": "https://github.com/HY219/wetube-reloaded#readme"
+}
