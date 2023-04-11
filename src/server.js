@@ -5,7 +5,11 @@ const PORT = 4000;
 const app = express(); //express function을 사용하면 express application을 생성해준다. //app이 express application이 되었다.
 
 //request 관련 코드 여기에 작성
-const handleHome = () => console.log("Somebody is trying to go home.");
+const handleHome = (req, res) => {
+  // console.log(req);
+  // console.log(res);
+  return res.end();
+};
 app.get("/", handleHome); //"/"(home)에 get request를 보낸다.
 
 const handleListening = () =>
