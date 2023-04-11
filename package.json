@@ -7,7 +7,7 @@
     "url": "git+https://github.com/HY219/wetube-reloaded.git"
   },
   "scripts": {
-    "win": "node index.js"
+    "dev": "babel-node index.js"
   },
   "author": "Hyeyeon Jeong",
   "license": "MIT",
