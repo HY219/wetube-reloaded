@@ -6,9 +6,7 @@ const app = express(); //express function을 사용하면 express application을
 
 //request 관련 코드 여기에 작성
 const handleHome = (req, res) => {
-  // console.log(req);
-  // console.log(res);
-  return res.end();
+  return res.send("I still love you.");
 };
 app.get("/", handleHome); //"/"(home)에 get request를 보낸다.
 
