@@ -8,7 +8,11 @@ const app = express(); //express function을 사용하면 express application을
 const handleHome = (req, res) => {
   return res.send("I still love you.");
 };
+const handleLogin = (req, res) => {
+  return res.send("LOgin here.");
+};
 app.get("/", handleHome); //"/"(home)에 get request를 보낸다.
+app.get("/login", handleLogin);
 
 const handleListening = () =>
   console.log(`Server listening on port http://localhost:${PORT}`);
