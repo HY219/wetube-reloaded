@@ -30,8 +30,8 @@ const handleProtected = (req, res) => {
 //순서 중요 (use 다음 URL에서 get)
 app.use(logger); //모든 route에 함수를 사용(적용)한다.
 app.use(privateMiddleware);
-app.get("/", handleHome, logger); //"/"(home)에 get request를 보낸다.
-app.get("/protected", handleProtected, logger);
+app.get("/", logger, handleHome); //"/"(home)에 get request를 보낸다.
+app.get("/protected", logger, handleProtected);
 
 const handleListening = () =>
   console.log(`Server listening on port http://localhost:${PORT}`);
