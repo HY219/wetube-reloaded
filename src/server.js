@@ -5,10 +5,15 @@ const PORT = 4000;
 const app = express(); //express function을 사용하면 express application을 생성해준다. //app이 express application이 되었다.
 
 //controller(=middleware)에 next인자(argument) 추가
-const handleHome = (req, res, next) => {
-  next(); //다음 함수를 호출해준다. //여기 코드에서는 다음 함수가 없다. -> Cannot GET /
+const gossipMiddleware = (req, res, next) => {
+  console.log("I'm in the middle!");
+  next(); //다음 함수를 호출해준다.
 };
-app.get("/", handleHome); //"/"(home)에 get request를 보낸다.
+const handleHome = (req, res, next) => {
+  // return res.end();
+  return res.send("I love middle ware");
+};
+app.get("/", gossipMiddleware, handleHome); //"/"(home)에 get request를 보낸다.
 
 const handleListening = () =>
   console.log(`Server listening on port http://localhost:${PORT}`);
